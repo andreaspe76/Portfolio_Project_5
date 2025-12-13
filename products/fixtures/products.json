@@ -1,0 +1,203 @@
+[
+    {
+        "model": "products.category",
+        "pk": 1,
+        "fields": {
+            "name": "Amplifier"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 2,
+        "fields": {
+            "name": "Speaker"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 3,
+        "fields": {
+            "name": "Turntable"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "name": "Aurora Silver Integrated Amp",
+            "brand": "Aurora",
+            "category": 1,
+            "price": "799.00",
+            "description": "Vintage brushed aluminum amplifier with warm, detailed sound.",
+            "image": "products/amp_1.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "name": "Technica Classic Amp",
+            "brand": "Technica",
+            "category": 1,
+            "price": "699.00",
+            "description": "Solid-state design inspired by 1970s Technics, clean and punchy.",
+            "image": "products/amp_2.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "name": "Harmonia Dual Mono Amp",
+            "brand": "Harmonia",
+            "category": 1,
+            "price": "849.00",
+            "description": "Dual-mono inspired Harman Kardon design, rich midrange clarity.",
+            "image": "products/amp_3.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "name": "Sonique Reference Amp",
+            "brand": "Sonique",
+            "category": 1,
+            "price": "999.00",
+            "description": "Minimalist Sony-inspired amplifier with precision volume control.",
+            "image": "products/amp_4.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "name": "Sansara Studio Amp",
+            "brand": "Sansara",
+            "category": 1,
+            "price": "899.00",
+            "description": "Robust Sansui-inspired amplifier with single VU meter.",
+            "image": "products/amp_5.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "name": "Aurora L100 Monitors",
+            "brand": "Aurora",
+            "category": 2,
+            "price": "1200.00",
+            "description": "Bookshelf speakers inspired by JBL L100, punchy bass, classic look.",
+            "image": "products/spk_1.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "name": "Klipsen Cornwall Towers",
+            "brand": "Klipsen",
+            "category": 2,
+            "price": "2500.00",
+            "description": "Large oak veneer floorstanders with horn tweeters.",
+            "image": "products/spk_2.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "name": "Triangle Borea BR04",
+            "brand": "Triangle",
+            "category": 2,
+            "price": "899.00",
+            "description": "Slim mahogany veneer towers with balanced sound.",
+            "image": "products/spk_3.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "name": "Pioneer HPM-100",
+            "brand": "Pioneer",
+            "category": 2,
+            "price": "1100.00",
+            "description": "Vintage-inspired black veneer speakers with crisp highs.",
+            "image": "products/spk_4.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "name": "KLH Model Five",
+            "brand": "KLH",
+            "category": 2,
+            "price": "1400.00",
+            "description": "Classic oak veneer speakers with warm midrange.",
+            "image": "products/spk_5.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "name": "Linn LP12 Classic",
+            "brand": "Linn",
+            "category": 3,
+            "price": "3500.00",
+            "description": "Iconic belt-drive turntable with walnut plinth and straight tonearm.",
+            "image": "products/trnt_1.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "name": "Technics SL1200 MKII",
+            "brand": "Technics",
+            "category": 3,
+            "price": "1200.00",
+            "description": "Legendary direct-drive DJ turntable with brushed aluminum finish.",
+            "image": "products/trnt_2.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 13,
+        "fields": {
+            "name": "Dual CS505",
+            "brand": "Dual",
+            "category": 3,
+            "price": "800.00",
+            "description": "German belt-drive turntable with warm wood plinth.",
+            "image": "products/trnt_3.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 14,
+        "fields": {
+            "name": "Systemdek IIX",
+            "brand": "Systemdek",
+            "category": 3,
+            "price": "950.00",
+            "description": "Classic Scottish turntable with reddish wood plinth.",
+            "image": "products/trnt_4.png"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 15,
+        "fields": {
+            "name": "Pro-Ject Debut Carbon",
+            "brand": "Pro-Ject",
+            "category": 3,
+            "price": "600.00",
+            "description": "Modern entry-level turntable with carbon tonearm and walnut finish.",
+            "image": "products/trnt_5.png"
+        }
+    }
+]
