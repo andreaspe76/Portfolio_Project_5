@@ -17,6 +17,12 @@ def product_list(request):
 
 def product_detail(request, pk):
     product = get_object_or_404(Product, pk=pk)
-    return render(request, "products/product_detail.html", {
+
+    template = "products/product_detail.html"
+    if request.user_agent.is_mobile:
+        template = "products/product_detail_mobile.html"
+
+    return render(request, template, {
         "product": product
+
     })
