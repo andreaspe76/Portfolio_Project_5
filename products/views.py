@@ -6,12 +6,17 @@ from .models import Product
 
 def product_list(request):
     products = Product.objects.all()
-    return render(request, "products/product_list.html", {
+    template = "products/product_list.html"
+    if request.user_agent.is_mobile:
+        template = "products/product_list_mobile.html"
+
+    return render(request, template, {
         "products": products
     })
 
-def product_detail(request, pk): 
-    product = get_object_or_404(Product, pk=pk) 
-    return render(request, "products/product_detail.html", { 
-        "product": product 
-        })
+
+def product_detail(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    return render(request, "products/product_detail.html", {
+        "product": product
+    })
