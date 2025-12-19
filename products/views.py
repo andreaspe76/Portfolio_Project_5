@@ -90,3 +90,14 @@ def decrease_quantity(request, pk):
             item.delete()
 
     return redirect("cart_detail")
+
+
+def increase_quantity(request, pk):
+    cart = get_cart(request)
+    item = CartItem.objects.filter(cart=cart, product_id=pk).first()
+
+    if item:
+        item.quantity += 1
+        item.save()
+
+    return redirect("cart_detail")
