@@ -20,7 +20,24 @@
         {% for item in cart.items.all %}
         <tr>
             <td>{{ item.product.name }}</td>
-            <td>{{ item.quantity }}</td>
+            <td>
+                <a href="{% url 'decrease_quantity' item.product.pk %}" class="btn btn-sm btn-outline-secondary">
+                    −
+                </a>
+
+                {{ item.quantity }}
+
+                <a href="{% url 'add_to_cart' item.product.pk %}" class="btn btn-sm btn-outline-secondary">
+                    +
+                </a>
+            </td>
+
+            <td>
+                <a href="{% url 'remove_from_cart' item.product.pk %}" class="btn btn-sm btn-danger">
+                    Remove
+                </a>
+            </td>
+
             <td>€{{ item.product.price }}</td>
             <td>€{{ item.quantity|multiply:item.product.price }}</td>
         </tr>

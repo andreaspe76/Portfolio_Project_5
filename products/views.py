@@ -66,3 +66,27 @@ def cart_detail(request):
     return render(request, "products/cart_detail.html", {
         "cart": cart
     })
+
+
+def remove_from_cart(request, pk):
+    cart = get_cart(request)
+    item = CartItem.objects.filter(cart=cart, product_id=pk).first()
+
+    if item:
+        item.delete()
+
+    return redirect("cart_detail")
+
+
+def decrease_quantity(request, pk):
+    cart = get_cart(request)
+    item = CartItem.objects.filter(cart=cart, product_id=pk).first()
+
+    if item:
+        if item.quantity > 1:
+            item.quantity -= 1
+            item.save()
+        else:
+            item.delete()
+
+    return redirect("cart_detail")
