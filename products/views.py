@@ -1,8 +1,34 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Product
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Product, Cart, CartItem
 
 # Create your views here.
 
+def get_cart(request):
+    cart_id = request.session.get("cart_id")
+
+    if cart_id:
+        cart = Cart.objects.filter(id=cart_id).first()
+        if cart:
+            return cart
+    
+    cart = Cart.objects.create()
+    request.session["cart_id"] = cart.id
+    return cart
+
+def add_to_cart(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    cart = get_cart(request)
+
+    item, created = CartItem.objects.get_or_create(
+        cart=cart,
+        product=product
+    )
+
+    if not created:
+        item.quantity += 1
+        item.save()
+
+    return redirect("product_detail", pk=pk)
 
 def product_list(request):
     products = Product.objects.all()
