@@ -28,7 +28,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG") == "True"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = os.environ.get(
+    "ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 # Application definition
 
@@ -79,7 +80,9 @@ WSGI_APPLICATION = 'hifi_store.wsgi.application'
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=os.environ.get("DATABASE_URL")
+        default="postgresql://neondb_owner:npg_lFVMGyto3nN4@ep-cool-smoke-ag87k37r.c-2.eu-central-1.aws.neon.tech/crust_froth_cozy_958341",
+        conn_max_age=600,
+        ssl_require=True,
     )
 }
 
