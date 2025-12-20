@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="mb-3">
-    <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
+    <img src="{% static product.image %}" class="img-fluid" alt="{{ product.name }}">
 </div>
 
 <h1 class="h4">{{ product.name }}</h1>
