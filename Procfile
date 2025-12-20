@@ -1,1 +1,1 @@
-web: gunicorn portfolio_project_5.wsgi
+web: gunicorn hifi_store.wsgi
