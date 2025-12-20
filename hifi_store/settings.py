@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 import dj_database_url
 
@@ -21,13 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-r2s0(#+%6z*y@jfz0u=bti*tk4=k@$omg^1%td+if&b&41kjc@'
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG") == "True"
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 
 # Application definition
 
@@ -77,9 +78,8 @@ WSGI_APPLICATION = 'hifi_store.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(
-        "postgresql://neondb_owner:npg_lFVMGyto3nN4@ep-cool-smoke-ag87k37r.c-2.eu-"
-        "central-1.aws.neon.tech/crust_froth_cozy_958341"
+    "default": dj_database_url.config(
+        default=os.environ.get("DATABASE_URL")
     )
 }
 
@@ -118,7 +118,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 # Media files
