@@ -1,0 +1,14 @@
+<h2>Checkout</h2>
+
+<p>Total: €{{ total }}</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button class="btn btn-success">
+        Pay €{{ total }}
+    </button>
+</form>
+
+<p class="mt-3 text-muted">
+    Test card: 4242 4242 4242 4242
+</p>

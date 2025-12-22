@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_user_agents',
     'products',
+    'checkout',
 ]
 
 MIDDLEWARE = [

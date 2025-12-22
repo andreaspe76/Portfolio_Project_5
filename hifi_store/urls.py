@@ -24,6 +24,7 @@ urlpatterns = [
     path('', lambda request: redirect('product_list')),
     path('admin/', admin.site.urls),
     path('products/', include('products.urls')),
+    path('checkout/', include('checkout.urls')),
 ]
 
 # For development only: serve media files.
