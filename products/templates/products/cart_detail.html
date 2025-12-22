@@ -48,6 +48,13 @@
     Total: €{{ cart.items.all|cart_total }}
 </p>
 
+<div class="text-end mt-3">
+    <a href="{% url 'checkout' %}" class="btn btn-primary">
+        Proceed to Checkout
+    </a>
+</div>
+
+
 {% else %}
 <p>Your cart is empty.</p>
 {% endif %}
