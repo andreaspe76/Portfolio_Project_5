@@ -3,13 +3,15 @@
 {% block title %}Order complete{% endblock %}
 
 {% block content %}
-<h1 class="mb-3">Payment successful</h1>
+<div class="text-center my-5">
+    <h1 class="mb-3">Payment successful</h1>
 
-<p class="mb-4">
-    Thank you for your order. A confirmation email will be sent shortly.
-</p>
+    <p class="mb-4 text-muted">
+        Thank you for your order. A confirmation email will be sent shortly.
+    </p>
 
-<a href="/products/" class="btn btn-primary">
-    Continue shopping
-</a>
+    <a href="/products/" class="btn btn-primary">
+        Continue shopping
+    </a>
+</div>
 {% endblock %}
