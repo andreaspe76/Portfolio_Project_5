@@ -12,15 +12,15 @@
 
 <body>
 
-    <header class="border-bottom">
-        <nav class="container d-flex justify-content-between align-items-center py-3">
-            <a href="/" class="fw-bold text-decoration-none">HiFi Store</a>
-            <div>
-                <a href="/products/" class="me-3">Products</a>
-                <a href="/accounts/login/">Login</a>
-                <a href="{% url 'cart_detail' %}" class="me-3">Cart</a>
-            </div>
-        </nav>
+    <header class="border-bottom bg-light"></header>
+    <nav class="container d-flex justify-content-between align-items-center py-3"> <a href="/"
+            class="fw-bold fs-4 text-decoration-none text-dark"> HiFi Store </a>
+        <div class="d-flex align-items-center"> <a href="/products/" class="me-4 text-decoration-none text-dark">
+                Products </a>
+            <a href="/accounts/login/" class="me-4 text-decoration-none text-dark"> Login </a>
+            <a href="{% url 'cart_detail' %}" class="text-decoration-none text-dark fw-semibold"> Cart </a>
+        </div>
+    </nav>
     </header>
 
     <main class="container my-4">
