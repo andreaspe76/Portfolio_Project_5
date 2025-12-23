@@ -19,7 +19,7 @@
                 Products </a>
             <a href="/accounts/login/" class="me-4 text-decoration-none text-dark"> Login </a>
             <a href="{% url 'cart_detail' %}" class="text-decoration-none text-dark fw-semibold"> Cart
-                {% if cart_item_count >0 %}
+                {% if cart_item_count > 0 %}
                 <span class="badge bg-primary rounded-pill ms-1">{{ cart_item_count }}</span>
                 {% endif %}
             </a>

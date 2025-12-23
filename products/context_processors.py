@@ -2,13 +2,15 @@ from .models import Cart
 
 
 def cart_item_count(request):
-    cart = Cart.objects.filter(session_key=request.session.session_key).first()
+    cart_id = request.session.get('cart_id')
 
-    if cart:
+    if not cart_id:
+        return {'cart_item_count': 0}
+
+    try:
+        cart = Cart.objects.get(id=cart_id)
         count = sum(item.quantity for item in cart.items.all())
-    else:
+    except Cart.DoesNotExist:
         count = 0
 
-    return {
-        'cart_item_count': count
-    }
+    return {'cart_item_count': count}
