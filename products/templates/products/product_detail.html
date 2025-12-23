@@ -6,15 +6,27 @@
 {% block content %}
 <div class="row">
     <div class="col-md-6">
-        <img src="{% static product.image %}" alt="{{ product.name }}">
+        <img src="{% static product.image %}" alt="{{ product.name }}" class="img-fluid rounded mb-3">
     </div>
 
     <div class="col-md-6">
-        <h1>{{ product.name }}</h1>
-        <p class="text-muted">{{ product.brand }}</p>
-        <p class="fw-bold">€{{ product.price }}</p>
-        <a href="{% url 'add_to_cart' product.pk %}" class="btn btn-primary mt3">Add to Cart</a>
-        <p>{{ product.description }}</p>
+        <h1 class="mb-2">{{ product.name }}</h1>
+
+        <p class="text-muted mb-2">
+            {{ product.brand }}
+        </p>
+
+        <p class="fw-bold fs-5 mb-3">
+            €{{ product.price }}
+        </p>
+
+        <a href="{% url 'add_to_cart' product.pk %}" class="btn btn-primary mb-4">
+            Add to Cart
+        </a>
+
+        <p>
+            {{ product.description }}
+        </p>
     </div>
 </div>
 {% endblock %}
