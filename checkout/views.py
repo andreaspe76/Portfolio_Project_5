@@ -13,7 +13,8 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def checkout(request):
     # Get the latest cart (submission-safe approach)
-    cart = Cart.objects.last()
+    cart_id = request.session.get("cart_id")
+    cart = Cart.objects.filter(id=cart_id).first()
 
     if not cart or not cart.items.exists():
         messages.error(request, "Your cart is empty.")
