@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 import stripe
 from decimal import Decimal
 
@@ -18,7 +19,7 @@ def checkout(request):
 
     if not cart or not cart.items.exists():
         messages.error(request, "Your cart is empty.")
-        return redirect("products")
+        return redirect("products_list")
 
     # Calculate total from CartItems
     total = Decimal("0.00")
@@ -69,3 +70,9 @@ def checkout(request):
 
 def checkout_success(request):
     return render(request, "checkout/checkout_success.html")
+
+
+@login_required
+def my_orders(request):
+    orders = Order.objects.filter(user=request.user).order_by("-created_at")
+    return render(request, "checkout/my_orders.html", {"orders": orders})

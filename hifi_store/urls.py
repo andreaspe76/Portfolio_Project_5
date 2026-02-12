@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('products/', include('products.urls')),
     path('checkout/', include('checkout.urls')),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
 
 # For development only: serve media files.
