@@ -19,9 +19,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.shortcuts import redirect
+from products.views import home
 
 urlpatterns = [
-    path('', lambda request: redirect('product_list')),
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('products/', include('products.urls')),
     path('checkout/', include('checkout.urls')),

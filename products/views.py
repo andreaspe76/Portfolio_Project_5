@@ -101,3 +101,7 @@ def increase_quantity(request, pk):
         item.save()
 
     return redirect("cart_detail")
+
+
+def home(request):
+    return render(request, "home.html")
