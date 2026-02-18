@@ -23,6 +23,7 @@
                 <a href="{% url 'my_orders' %}" class="me-4 text-decoration-none text-dark">
                     My Orders
                 </a>
+
                 <form method="post" action="{% url 'logout' %}" class="d-inline me-4">
                     {% csrf_token %}
                     <button type="submit" class="btn btn-link p-0 text-decoration-none text-dark">

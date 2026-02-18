@@ -32,11 +32,16 @@ nav a {
 
 /* Buttons */
 .btn-primary {
-    background-color: #1f3c88;
-    border-color: #1f3c88;
+    background-color: #6b4f3f; 
+    border-color: #6b4f3f;
 }
 
 .btn-primary:hover {
-    background-color: #162c63;
-    border-color: #162c63;
+    background-color: #5a4133; 
+    border-color: #5a4133
 }
+
+.btn {
+    border-radius: 0 !important;
+}
+
