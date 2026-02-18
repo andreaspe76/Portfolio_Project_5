@@ -15,11 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
-from django.shortcuts import redirect
+from django.views.static import serve
 from products.views import home
+from django.views.generic import TemplateView
+
 
 urlpatterns = [
     path('', home, name='home'),
@@ -27,6 +29,11 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('checkout/', include('checkout.urls')),
     path("accounts/", include("django.contrib.auth.urls")),
+
+    # Serve robots.txt
+    path("robots.txt", TemplateView.as_view(
+        template_name="robots.txt", content_type="text/plain")),
+
 ]
 
 # For development only: serve media files.

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow:
+
+Sitemap: User-agent: *
+Disallow:
+
+Sitemap: https://hifi-store-project-5-61926ce0a9e2.herokuapp.com/sitemap.xml
