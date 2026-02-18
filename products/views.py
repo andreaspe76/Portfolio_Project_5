@@ -3,7 +3,7 @@ Docstring for products.views
 """
 
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Product, Cart, CartItem
+from .models import Product, Cart, CartItem, Category
 
 # Create your views here.
 
@@ -38,13 +38,21 @@ def add_to_cart(request, pk):
 
 
 def product_list(request):
+    category_name = request.GET.get("category")
     products = Product.objects.all()
+    categories = Category.objects.all()
+
+    if category_name:
+        products = products.filter(category__name__iexact=category_name)
+
     template = "products/product_list.html"
     if request.user_agent.is_mobile:
         template = "products/product_list_mobile.html"
 
     return render(request, template, {
-        "products": products
+        "products": products,
+        "categories": categories,
+        "active_category": category_name,
     })
 
 
