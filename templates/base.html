@@ -8,43 +8,44 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'products/css/style.css' %}">
 </head>
 
 <body>
 
-    <header class="border-bottom bg-light"></header>
-    <nav class="container d-flex justify-content-between align-items-center py-3"> <a href="/"
-            class="fw-bold fs-4 text-decoration-none text-dark"> HiFi Store </a>
-        <div class="d-flex align-items-center"> <a href="/products/" class="me-4 text-decoration-none text-dark">
-                Products </a>
+    <header class="border-bottom bg-light">
+        <nav class="container d-flex justify-content-between align-items-center py-3"> <a href="/"
+                class="fw-bold fs-4 text-decoration-none text-dark"> HiFi Store </a>
+            <div class="d-flex align-items-center"> <a href="/products/" class="me-4 text-decoration-none text-dark">
+                    Products </a>
 
-            {% if user.is_authenticated %}
-            <a href="{% url 'my_orders' %}" class="me-4 text-decoration-none text-dark">
-                My Orders
-            </a>
-            <form method="post" action="{% url 'logout' %}" class="d-inline me-4">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-link p-0 text-decoration-none text-dark">
-                    Logout
-                </button>
-            </form>
+                {% if user.is_authenticated %}
+                <a href="{% url 'my_orders' %}" class="me-4 text-decoration-none text-dark">
+                    My Orders
+                </a>
+                <form method="post" action="{% url 'logout' %}" class="d-inline me-4">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-link p-0 text-decoration-none text-dark">
+                        Logout
+                    </button>
+                </form>
 
-            {% else %}
-            <a href="{% url 'register' %}" class="me-4 text-decoration-none text-dark">
-                Register
-            </a>
-            <a href="/accounts/login/" class="me-4 text-decoration-none text-dark">
-                Login
-            </a>
-            {% endif %}
-
-            <a href="{% url 'cart_detail' %}" class="text-decoration-none text-dark fw-semibold"> Cart
-                {% if cart_item_count > 0 %}
-                <span class="badge bg-primary rounded-pill ms-1">{{ cart_item_count }}</span>
+                {% else %}
+                <a href="{% url 'register' %}" class="me-4 text-decoration-none text-dark">
+                    Register
+                </a>
+                <a href="/accounts/login/" class="me-4 text-decoration-none text-dark">
+                    Login
+                </a>
                 {% endif %}
-            </a>
-        </div>
-    </nav>
+
+                <a href="{% url 'cart_detail' %}" class="text-decoration-none text-dark fw-semibold"> Cart
+                    {% if cart_item_count > 0 %}
+                    <span class="badge bg-primary rounded-pill ms-1">{{ cart_item_count }}</span>
+                    {% endif %}
+                </a>
+            </div>
+        </nav>
     </header>
 
     <main class="container my-4">
