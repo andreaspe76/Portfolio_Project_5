@@ -14,4 +14,25 @@
     <p class="lead mb-4"> Explore our curated selection of amplifiers, speakers, and turntables. </p> <a
         href="{% url 'product_list' %}" class="btn btn-primary btn-lg"> Browse Products </a>
 </section>
+
+<section class="bg-light py-5 mt-5">
+    <div class="container text-center">
+        <h2 class="mb-3">Stay in Tune</h2>
+        <p class="text-muted mb-4">
+            Subscribe to our newsletter for product updates, audio insights, and exclusive offers.
+        </p>
+
+        <form class="row justify-content-center">
+            <div class="col-md-4 mb-2">
+                <input type="email" class="form-control" placeholder="Enter your email address" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <button type="submit" class="btn btn-primary w-100">
+                    Subscribe
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
 {% endblock %}
