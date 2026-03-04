@@ -77,10 +77,31 @@
         {% endblock %}
     </main>
 
-    <footer class="border-top text-center py-3 text-muted">
-        © HiFi Store
-        <a href="https://www.whathifi.com" target="_blank" rel="nofollow noopener" class="text-muted"> What Hi-Fi?
-            Reviews </a>
+    <footer class="border-top py-4 text-muted">
+        <div class="container text-center">
+
+            <p class="mb-2">Subscribe for updates and exclusive offers</p>
+
+            <form method="post" action="{% url 'newsletter_signup' %}" class="row justify-content-center g-2 mb-3">
+                {% csrf_token %}
+                <div class="col-md-4">
+                    <input type="email" name="email" class="form-control" placeholder="Email address" required>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+
+            <small>
+                © HiFi Store ·
+                <a href="https://www.whathifi.com" target="_blank" rel="nofollow noopener" class="text-muted">
+                    What Hi‑Fi? Reviews
+                </a>
+            </small>
+
+        </div>
     </footer>
 
 </body>
