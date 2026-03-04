@@ -23,6 +23,7 @@ from products.views import home
 from django.views.generic import TemplateView
 from products.sitemaps import StaticViewSitemap, ProductSitemap
 from django.contrib.sitemaps.views import sitemap
+from hifi_store.views import newsletter_signup
 
 
 urlpatterns = [
@@ -31,6 +32,7 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('checkout/', include('checkout.urls')),
     path("accounts/", include("django.contrib.auth.urls")),
+    path('newsletter-signup/', newsletter_signup, name='newsletter_signup'),
 
     # Serve robots.txt
     path("robots.txt", TemplateView.as_view(
