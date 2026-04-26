@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 from pathlib import Path
 import dj_database_url
+from django.conf import settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,6 +78,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'products.context_processors.cart_item_count',
+                'core.context_processors.facebook_pixel',
             ],
         },
     },
@@ -148,3 +150,6 @@ LOGOUT_REDIRECT_URL = "home"
 
 # Use custom error templates
 CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
+
+# Facebook Pixel ID empty by default
+FACEBOOK_PIXEL_ID = os.getenv("FACEBOOK_PIXEL_ID", "")

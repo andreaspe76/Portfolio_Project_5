@@ -20,6 +20,38 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'products/css/style.css' %}">
+
+    <!--Open Graph metadata-->
+    <meta property="og:title" content="{% block og_title %}HiFi Store{% endblock %}">
+    <meta property="og:description"
+        content="{% block og_description %}Premium Hi‑Fi gear and curated audio equipment.{% endblock %}">
+    <meta property="og:image"
+        content="{% block og_image %}{% static 'products/static/products/og-share.jpg' %}{% endblock %}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Guarded Facebook Pixel: only rendered when FACEBOOK_PIXEL_ID is present -->
+    {% if FACEBOOK_PIXEL_ID %}
+    <!-- Facebook Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '{{ FACEBOOK_PIXEL_ID }}');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id={{ FACEBOOK_PIXEL_ID }}&ev=PageView&noscript=1" /></noscript>
+    {% endif %}
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -97,6 +129,14 @@
                     </form>
                 </div>
             </div>
+
+            {% if FACEBOOK_PIXEL_ID %}
+            <div class="text-center mt-2">
+                <small class="text-muted">We use analytics to improve the site. Tracking is enabled in production
+                    only.</small>
+            </div>
+            {% endif %}
+
             <div class="text-center mt-3"> <small>© HiFi Store</small> </div>
         </div>
     </footer>
