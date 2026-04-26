@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django_user_agents',
     'products',
     'checkout',
+    'hifi_store',
 ]
 
 MIDDLEWARE = [

@@ -3,6 +3,7 @@ Docstring for products.views
 """
 
 from django.shortcuts import render, redirect, get_object_or_404
+from django.core.paginator import Paginator
 from .models import Product, Cart, CartItem, Category
 
 # Create your views here.
@@ -45,12 +46,16 @@ def product_list(request):
     if category_name:
         products = products.filter(category__name__iexact=category_name)
 
+    paginator = Paginator(products, 6)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
     template = "products/product_list.html"
     if request.user_agent.is_mobile:
         template = "products/product_list_mobile.html"
 
     return render(request, template, {
-        "products": products,
+        "page_obj": page_obj,
         "categories": categories,
         "active_category": category_name,
     })

@@ -181,6 +181,20 @@ A fictional e-commerce site for hi-fi equipment, built as a final project.
  -----------------------------------------------------
 
 
+
+## **Register Wireframe**
+
+-----------------------------------------------------
+|              NEWSLETTER SIGNUP                    |
+|  "Stay in Tune with HiFi Store"                   |
+|  Short description text                           |
+|  [ Email input field ] [ Subscribe button ]       |
+-----------------------------------------------------
+
+
+
+
+
 ## **404 Error Page Wireframe**
  -----------------------------------------------------
 |                     NAVBAR                         |
