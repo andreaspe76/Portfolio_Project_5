@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
     'django_user_agents',
@@ -52,6 +53,9 @@ INSTALLED_APPS = [
     'checkout',
     'hifi_store',
 ]
+
+SITE_ID = 1
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
