@@ -209,6 +209,15 @@ A fictional e-commerce site for hi-fi equipment, built as a final project.
 
 
 
+
+## Facebook mock up
+<img src="./products/static/products/facebook_mockup.png" alt="Facebook Mockup" width="600">
+
+
+
+
+
+
 ## Marketing Strategy
 
 ### Target Audience
