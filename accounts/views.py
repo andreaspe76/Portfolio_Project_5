@@ -24,14 +24,19 @@ def edit_profile(request):
 
 @login_required
 def delete_profile(request):
-    profile = UserProfile.objects.get(user=request.user)
+    user = request.user  # FIX: you forgot to define 'user'
 
     if request.method == "POST":
+        # Delete the profile if it exists
         UserProfile.objects.filter(user=user).delete()
+
+        # Delete the user account itself
         user.delete()
+
+        # Log out the session
         logout(request)
-        messages.success(request, "Your profile has been deleted.")
-        return redirect("home")
 
+        messages.success(request, "Your account has been deleted.")
+        return redirect("home")  # or your homepage URL name
 
-return render(request, "accounts/delete_profile.html")
+    return render(request, "accounts/delete_profile.html")
