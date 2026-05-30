@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Delete Profile{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="fw-bold text-danger mb-4">Delete Profile</h1>
+
+    <p class="fs-5">
+        Are you sure you want to delete your profile?
+        This will remove your saved address and contact details, but your account will remain active.
+    </p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button class="btn btn-danger btn-lg px-4">Yes, delete my profile</button>
+        <a href="{% url 'edit_profile' %}" class="btn btn-secondary btn-lg px-4 ms-2">Cancel</a>
+    </form>
+</div>
+{% endblock %}
