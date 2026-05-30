@@ -32,6 +32,7 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('checkout/', include('checkout.urls')),
     path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/", include("accounts.urls")),
     path('newsletter-signup/', newsletter_signup, name='newsletter_signup'),
 
     # Serve robots.txt
