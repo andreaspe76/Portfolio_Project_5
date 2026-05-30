@@ -15,3 +15,7 @@ env/
 staticfiles/
 
 
+# Ignore environment variables.env
+.env
+*.env
+.env.*
