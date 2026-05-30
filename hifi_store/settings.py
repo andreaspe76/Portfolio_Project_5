@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'products',
     'checkout',
     'hifi_store',
+    'accounts',
 ]
 
 SITE_ID = 3
