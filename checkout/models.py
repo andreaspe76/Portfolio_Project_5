@@ -8,7 +8,7 @@ from products.models import Product
 class Order(models.Model):
     user = models.ForeignKey(
         User,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         null=True,
         blank=True,
         related_name="orders",
@@ -45,7 +45,7 @@ class OrderItem(models.Model):
     # Link to actual product
     product = models.ForeignKey(
         Product,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         null=True,
         blank=True,
     )
