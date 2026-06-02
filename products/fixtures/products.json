@@ -8,7 +8,7 @@
             "category": 1,
             "price": "799.00",
             "description": "Vintage brushed aluminum amplifier with warm, detailed sound.",
-            "image": "products/amp_1.png"
+            "image": "products/amp_1.webp"
         }
     },
     {
@@ -20,7 +20,7 @@
             "category": 1,
             "price": "699.00",
             "description": "Solid-state design inspired by 1970s Technics, clean and punchy.",
-            "image": "products/amp_2.png"
+            "image": "products/amp_2.webp"
         }
     },
     {
@@ -32,7 +32,7 @@
             "category": 1,
             "price": "849.00",
             "description": "Dual-mono inspired Harman Kardon design, rich midrange clarity.",
-            "image": "products/amp_3.png"
+            "image": "products/amp_3.webp"
         }
     },
     {
@@ -44,7 +44,7 @@
             "category": 1,
             "price": "999.00",
             "description": "Minimalist Sony-inspired amplifier with precision volume control.",
-            "image": "products/amp_4.png"
+            "image": "products/amp_4.webp"
         }
     },
     {
@@ -56,7 +56,7 @@
             "category": 1,
             "price": "899.00",
             "description": "Robust Sansui-inspired amplifier with single VU meter.",
-            "image": "products/amp_5.png"
+            "image": "products/amp_5.webp"
         }
     },
     {
@@ -68,7 +68,7 @@
             "category": 2,
             "price": "1200.00",
             "description": "Bookshelf speakers inspired by JBL L100, punchy bass, classic look.",
-            "image": "products/spk_1.png"
+            "image": "products/spk_1.webp"
         }
     },
     {
@@ -80,7 +80,7 @@
             "category": 2,
             "price": "2500.00",
             "description": "Large oak veneer floorstanders with horn tweeters.",
-            "image": "products/spk_2.png"
+            "image": "products/spk_2.webp"
         }
     },
     {
@@ -92,7 +92,7 @@
             "category": 2,
             "price": "899.00",
             "description": "Slim mahogany veneer towers with balanced sound.",
-            "image": "products/spk_3.png"
+            "image": "products/spk_3.webp"
         }
     },
     {
@@ -104,7 +104,7 @@
             "category": 2,
             "price": "1100.00",
             "description": "Vintage-inspired black veneer speakers with crisp highs.",
-            "image": "products/spk_4.png"
+            "image": "products/spk_4.webp"
         }
     },
     {
@@ -116,7 +116,7 @@
             "category": 2,
             "price": "1400.00",
             "description": "Classic oak veneer speakers with warm midrange.",
-            "image": "products/spk_5.png"
+            "image": "products/spk_5.webp"
         }
     },
     {
@@ -128,7 +128,7 @@
             "category": 3,
             "price": "3500.00",
             "description": "Iconic belt-drive turntable with walnut plinth and straight tonearm.",
-            "image": "products/trnt_1.png"
+            "image": "products/trnt_1.webp"
         }
     },
     {
@@ -140,7 +140,7 @@
             "category": 3,
             "price": "1200.00",
             "description": "Legendary direct-drive DJ turntable with brushed aluminum finish.",
-            "image": "products/trnt_2.png"
+            "image": "products/trnt_2.webp"
         }
     },
     {
@@ -152,7 +152,7 @@
             "category": 3,
             "price": "800.00",
             "description": "German belt-drive turntable with warm wood plinth.",
-            "image": "products/trnt_3.png"
+            "image": "products/trnt_3.webp"
         }
     },
     {
@@ -164,7 +164,7 @@
             "category": 3,
             "price": "950.00",
             "description": "Classic Scottish turntable with reddish wood plinth.",
-            "image": "products/trnt_4.png"
+            "image": "products/trnt_4.webp"
         }
     },
     {
@@ -176,7 +176,7 @@
             "category": 3,
             "price": "600.00",
             "description": "Modern entry-level turntable with carbon tonearm and walnut finish.",
-            "image": "products/trnt_5.png"
+            "image": "products/trnt_5.webp"
         }
     }
 ]
