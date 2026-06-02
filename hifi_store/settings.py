@@ -99,11 +99,7 @@ WSGI_APPLICATION = 'hifi_store.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(
-        default="postgresql://neondb_owner:npg_lFVMGyto3nN4@ep-cool-smoke-ag87k37r.c-2.eu-central-1.aws.neon.tech/crust_froth_cozy_958341",
-        conn_max_age=600,
-        ssl_require=True,
-    )
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 # Stripe settings
@@ -158,6 +154,3 @@ LOGOUT_REDIRECT_URL = "home"
 
 # Use custom error templates
 CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
-
-# Facebook Pixel ID empty by default
-FACEBOOK_PIXEL_ID = os.getenv("FACEBOOK_PIXEL_ID", "")
