@@ -35,10 +35,6 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     path('newsletter-signup/', newsletter_signup, name='newsletter_signup'),
 
-    # Serve robots.txt
-    path("robots.txt", TemplateView.as_view(
-        template_name="robots.txt", content_type="text/plain")),
-
 ]
 
 # Sitemap configuration
