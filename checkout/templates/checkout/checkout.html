@@ -9,7 +9,7 @@
 <div class="row">
     <!--Customer Details-->
     <div class="col-md-6 mb-4">
-        <h5 class="mb-3">Your details</h5>
+        <p class="h5 mb-3">Your details</p>
 
         <form id="payment-form" method="POST">
             {% csrf_token %}
@@ -30,7 +30,7 @@
 
     <!--Order Summary-->
     <div class="col-md-6">
-        <h5 class="mb-3">Order summary</h5>
+        <p class="h5 mb-3">Order summary</p>
 
         <div class="border p-3 rounded">
             {% for item in cart.items.all %}
