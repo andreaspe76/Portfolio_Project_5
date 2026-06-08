@@ -69,6 +69,7 @@ This combination of technical challenge and personal relevance made the HiFi Sto
 4. Returning customers log in → view past orders and track purchase history.
 5. Users signup to the newsletter → potentially receive advanced notice of upcoming sales.
 
+
 ## **Homepage Wireframe**
 
  -----------------------------------------------------
@@ -273,39 +274,46 @@ This combination of technical challenge and personal relevance made the HiFi Sto
 | As a site owner | I would like to manage product categories | so that I can ensure items are correctly organized and easy for customers to find. |
 | As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. |
 
+
 ### Existing Features
 
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Register | Authentication is handled by allauth, allowing users to register accounts. | ![screenshot](documentation/features/register.png) |
-| Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
-| Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
-| Product List | Users can browse all available products with sorting, filtering by categories, and search functionality. | ![screenshot](documentation/features/product-list.png) |
-| Product Details | Displays detailed information about a selected product, including its name, description, price, an image, and available sizes. | ![screenshot](documentation/features/product-details.png) |
-| Add to Bag | Users can add items to their shopping bag, with support for selecting different sizes if applicable. | ![screenshot](documentation/features/add-to-bag.png) |
-| View Bag | Users can view the contents of their shopping bag, adjust quantities, or remove items. | ![screenshot](documentation/features/view-bag.png) |
-| Checkout | Users can proceed to checkout, where they provide their delivery details and payment information using Stripe integration. | ![screenshot](documentation/features/checkout.png) |
-| Order Confirmation | Users receive an on-screen and email confirmation with details of their purchase. | ![screenshot](documentation/features/order-confirmation.png) |
-| Profile Management | Users can manage their profile information, including their default delivery address and order history. | ![screenshot](documentation/features/profile-management.png) |
-| Order History | Users can view their past orders and access details of each order, including products purchased and the delivery status. | ![screenshot](documentation/features/order-history.png) |
-| Product Management | Superusers can add, edit, and delete products from the site via a CRUD interface. | ![screenshot](documentation/features/product-management.png) |
-| Newsletter | Users can register their email address to receive newsletters from the site. Currently, this only stores the email in the database. | ![screenshot](documentation/features/newsletter.png) |
-| Contact | Users can submit a message via the contact form, which stores their name, email, and message in the database. | ![screenshot](documentation/features/contact.png) |
-| FAQs | Admins can manage frequently asked questions, which are displayed on the site for users. | ![screenshot](documentation/features/faqs.png) |
-| User Feedback | Clear and concise Django messages are used to provide feedback to users when interacting with various features (e.g., adding products to the bag, checking out, etc.). | ![screenshot](documentation/features/user-feedback.png) |
-| Heroku Deployment | The site is deployed to Heroku, making it accessible online for users. | ![screenshot](documentation/features/heroku.png) |
-| SEO | SEO optimization with a sitemap.xml, robots.txt, and appropriate meta tags to improve search engine visibility. | ![screenshot](documentation/features/seo.png) |
-| Marketing | Social media presence is available in the footer using external links, as well as a Facebook Marketplace wireframe in the README for future integrations. | ![screenshot](documentation/features/marketing.png) |
-| 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
+| Register | Authentication is handled by allauth, allowing users to register accounts. | ![screenshot](./static/documentation/features/register.png) |
+| Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](./static/documentation/features/login.png) |
+| Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](./static/documentation/features/logout.png) |
+| Product List | Users can browse all available products with sorting, filtering by categories, and search functionality. | ![screenshot](./static/documentation/features/product_list.png) |
+| Product Details | Displays detailed information about a selected product, including its name, description, price, an image, and available sizes. | ![screenshot](./static/documentation/features/product_details.png) |
+| Add to Cart | Users can add items to their shopping cart, with support for selecting different sizes if applicable. | ![screenshot](./static/documentation/features/add_cart.png) |
+| View Cart | Users can view the contents of their shopping cart, adjust quantities, or remove items. | ![screenshot](./static/documentation/features/view_cart.png) |
+| Checkout | Users can proceed to checkout, where they provide their delivery details and payment information using Stripe integration. | ![screenshot](./static/documentation/features/checkout.png) |
+| Order Confirmation | Users receive an on-screen confirmation with details of their purchase. | ![screenshot](./static/documentation/features/order_history.png) |
+| Profile Management | Users can manage their profile information, including their default delivery address and order history. | ![screenshot](./static/documentation/features/edit_profile.png) |
+| Order History | Users can view their past orders and access details of each order, including products purchased and the delivery status. | ![screenshot](./static/documentation/features/order_history.png) |
+| Product Management | Superusers can add, edit, and delete products from the admin panel via a CRUD interface. | ![screenshot](./static/documentation/features/add_product.png) |
+| Newsletter | Users can register their email address to receive newsletters from the site. Currently, this only stores the email in the database. | ![screenshot](./static/documentation/features/newsletter.png) |
+| SEO | SEO optimization with a sitemap.xml, robots.txt, and appropriate meta tags to improve search engine visibility. | 
+| 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](./static/documentation/features/404.png) |
 
+## Tools & Technologies
 
-
-## Facebook mock up
-<img src="./products/static/products/facebook_mockup.png" alt="Facebook Mockup" width="600">
-
-
-
-
+| Tool / Tech | Use |
+| --- | --- |
+| [![badge](https://img.shields.io/badge/Markdown_Builder-grey?logo=markdown&logoColor=000000)](https://markdown.2bn.dev) | Generate README and TESTING templates. |
+| [![badge](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) | Version control. (`git add`, `git commit`, `git push`) |
+| [![badge](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) | Secure online code storage. |
+| [![badge](https://img.shields.io/badge/VSCode-grey?logo=htmx&logoColor=007ACC)](https://code.visualstudio.com) | Local IDE for development. |
+| [![badge](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) | Main site content and layout. |
+| [![badge](https://img.shields.io/badge/CSS-grey?logo=css&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) | Design and layout. |
+| [![badge](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) | User interaction on the site. |
+| [![badge](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) | Back-end programming language. |
+| [![badge](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) | Hosting the deployed back-end site. |
+| [![badge](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) | Front-end CSS framework for modern responsiveness and pre-built components. |
+| [![badge](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) | Python framework for the site. |
+| [![badge](https://img.shields.io/badge/PostgreSQL-grey?logo=postgresql&logoColor=4169E1)](https://www.postgresql.org) | Relational database management. |
+| [![badge](https://img.shields.io/badge/WhiteNoise-grey?logo=python&logoColor=FFFFFF)](https://whitenoise.readthedocs.io) | Serving static files with Heroku. |
+| [![badge](https://img.shields.io/badge/Stripe-grey?logo=stripe&logoColor=008CDD)](https://stripe.com) | Online secure payments of e-commerce products/services. |
+| [![badge](https://img.shields.io/badge/Copilot-grey?logo=githubcopilot&logoColor=##000000)](https://github.com/copilot) | Help debug, troubleshoot, and explain things. |
 
 
 ## Marketing Strategy
@@ -326,6 +334,8 @@ HiFi Store’s marketing approach combines organic SEO and social media engageme
 
 ### Facebook Integration
 The site integrates Facebook Pixel to track user interactions and support remarketing campaigns. This enables targeted advertising and audience insights, helping the brand reach users who previously visited the site or interacted with posts.
+
+![screenshot](./static/documentation/mockups/facebook%20mockup.png)
 
 ### Content Strategy
 HiFi Store’s content focuses on educating and inspiring users:
@@ -355,3 +365,151 @@ Key success metrics include:
 - Website traffic from social media referrals
 - Conversion rate from Facebook Pixel analytics
 - SEO ranking improvements for relevant product keywords
+
+## Testing
+
+> [!NOTE]  
+> For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+## Deployment
+
+The live deployed application can be found deployed on [Heroku](https://hifi-store-project-5-61926ce0a9e2.herokuapp.com).
+
+### Heroku Deployment
+
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), then finally, click **Create App**.
+- From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables to match your private `env.py` file.
+
+> [!IMPORTANT]  
+> This is a sample only; you would replace the values with your own if cloning/forking my repository.
+
+
+| Key | Value |
+| --- | --- |
+| `ALLOWED_HOSTS` | your-heroku-app-domain.herokuapp.com |
+| `CSRF_TRUSTED_ORIGINS` | your-heroku-app-domain.herokuapp.com |
+| `DATABASE_URL` | user-inserts-own-postgres-database-url |
+| `SECRET_KEY` | any-random-secret-key |
+| `STRIPE_PUBLIC_KEY` | user-inserts-own-stripe-public-key |
+| `STRIPE_SECRET_KEY` | user-inserts-own-stripe-secret-key |
+
+Heroku needs some additional files in order to deploy properly.
+
+- [requirements.txt](requirements.txt)
+- [Procfile](Procfile)
+- [.python-version](.python-version)
+
+### PostgreSQL
+
+This project uses a [Code Institute PostgreSQL Database](https://dbs.ci-dbs.net) for the Relational Database with Django.
+
+> [!CAUTION]
+> - PostgreSQL databases by Code Institute are only available to CI Students.
+> - You must acquire your own PostgreSQL database through some other method if you plan to clone/fork this repository.
+> - Code Institute students are allowed a maximum of 8 databases.
+> - Databases are subject to deletion after 18 months.
+
+To obtain my own Postgres Database from Code Institute, I followed these steps:
+
+- Submitted my email address to the CI PostgreSQL Database link above.
+- An email was sent to me with my new Postgres Database.
+- The Database connection string will resemble something like this:
+    - `postgres://<db_username>:<db_password>@<db_host_url>/<db_name>`
+- You can use the above URL with Django; simply paste it into your `env.py` file and Heroku Config Vars as `DATABASE_URL`.
+
+### Stripe API
+
+This project uses [Stripe](https://stripe.com) to handle the ecommerce payments.
+
+Once you've created a Stripe account and logged-in, follow these series of steps to get your project connected.
+
+- From your Stripe dashboard, click to expand the "Get your test API keys".
+- You'll have two keys here:
+	- `STRIPE_PUBLIC_KEY` = Publishable Key (starts with **pk**)
+	- `STRIPE_SECRET_KEY` = Secret Key (starts with **sk**)
+
+### WhiteNoise
+
+This project uses the [WhiteNoise](https://whitenoise.readthedocs.io/en/latest/) to aid with static files temporarily hosted on the live Heroku site.
+
+To include WhiteNoise in your own projects:
+
+- Install the latest WhiteNoise package:
+    - `pip install whitenoise`
+- Update the `requirements.txt` file with the newly installed package:
+    - `pip freeze --local > requirements.txt`
+- Edit your `settings.py` file and add WhiteNoise to the `MIDDLEWARE` list, above all other middleware (apart from Django’s "SecurityMiddleware"):
+
+```python
+# settings.py
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # any additional middleware
+]
+```
+
+### Cloning
+
+You can clone the repository by following these steps:
+
+1. Go to the [GitHub repository](https://www.github.com/andreaspe76/Portfolio_Project_5).
+2. Locate and click on the green "Code" button at the very top, above the commits and files.
+3. Select whether you prefer to clone using "HTTPS", "SSH", or "GitHub CLI", and click the "copy" button to copy the URL to your clipboard.
+4. Open "Git Bash" or "Terminal".
+5. Change the current working directory to the location where you want the cloned directory.
+6. In your IDE Terminal, type the following command to clone the repository:
+	- `git clone https://www.github.com/andreaspe76/Portfolio_Project_5.git`
+7. Press "Enter" to create your local clone.
+
+Alternatively, if using Ona (formerly Gitpod), you can click below to create your own workspace using this repository.
+
+[![Open in Ona-Gitpod](https://ona.com/run-in-ona.svg)](https://gitpod.io/#https://www.github.com/andreaspe76/Portfolio_Project_5)
+
+**Please Note**: in order to directly open the project in Ona (Gitpod), you should have the browser extension installed. A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
+#### Forking
+
+By forking the GitHub Repository, you make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository. You can fork this repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://www.github.com/andreaspe76/Portfolio_Project_5).
+2. At the top of the Repository, just below the "Settings" button on the menu, locate and click the "Fork" Button.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+## Credits
+
+| Source | Notes |
+| --- | --- |
+| [Markdown Builder](https://markdown.2bn.dev) | Help generating Markdown files |
+| [Chris Beams](https://chris.beams.io/posts/git-commit) | "How to Write a Git Commit Message" |
+| [Boutique Ado](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
+| [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
+| [Whitenoise](https://whitenoise.readthedocs.io) | Static file service |
+| [Stripe](https://docs.stripe.com/payments/elements) | Online payment services |
+| [Python Tutor](https://pythontutor.com) | Additional Python help |
+| [VS Code Copilot](https://code.visualstudio.com) | Help with code logic, explanations and code completion |
+| [Django Oscar](https://django-oscar.readthedocs.io) | E-commerce framework for Django |
+| [Django Allauth](https://django-allauth.readthedocs.io) | User authentication for Django |
+| [RealPython Django Tutorials](https://realpython.com/tutorials/django/) | High level Python web framework focused on rapid development and clean design |
+
+### Media
+
+All images used in this project was either created by myself, or by MS Copilot.
+
+| Source | Notes |
+| --- | --- |
+| [favicon.io](https://favicon.io) | Generating the favicon |
+| [Boutique Ado](https://codeinstitute.net) | Sample images provided from the walkthrough projects |
+
+### Acknowledgements
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support at the final resubmission of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) Tutor Team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank my partner, for believing in me, and allowing me to make this transition into software development.
+- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
