@@ -210,7 +210,6 @@ This combination of technical challenge and personal relevance made the HiFi Sto
 
 
 
-
 ## **Register Wireframe**
  -----------------------------------------------------
 |                     NAVBAR                         |
@@ -234,7 +233,6 @@ This combination of technical challenge and personal relevance made the HiFi Sto
 |  Short description text                           |
 |  [ Email input field ] [ Subscribe button ]       |
 -----------------------------------------------------
-
 
 
 
