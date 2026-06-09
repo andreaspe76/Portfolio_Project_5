@@ -25,3 +25,11 @@ I have used [Nu Html Checker](https://validator.nu/) to validate all of my HTML 
 | templates | [home.html](https://github.com/andreaspe76/Portfolio_Project_5/blob/main/templates/home.html) | ![screenshot](./static/documentation/html_validation/home_validation.png) |
 | templates | [login.html](https://github.com/andreaspe76/Portfolio_Project_5/blob/main/templates/registration/login.html) | ![screenshot](./static/documentation/html_validation/login_validation.png) |
 | templates | [register.html](https://github.com/andreaspe76/Portfolio_Project_5/blob/main/templates/registration/register.html) | ![screenshot](./static/documentation/html_validation/register_validation.png) |
+
+### CSS
+
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
+
+| Directory | File | URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| products | [style.css](https://github.com/andreaspe76/Portfolio_Project_5/blob/main/products/static/products/css/style.css) | ![screenshot](./static/documentation/css_validation/css_validation.png) |
