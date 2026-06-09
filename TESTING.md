@@ -101,6 +101,8 @@ I have encountered several bugs during the development of this project, but I ha
 
 ### Known Issues
 
-When a User deletes their profile, all of their orders are also deleted due to the on_delete=models.CASCADE setting on the Order model. This means that if a user deletes their profile, they will lose access to their order history. This is not ideal, but it is a trade‑off that I have made in order to allow users to delete their profiles without encountering errors and I plan to fix this in a future update by implementing a soft delete mechanism for user profiles, which would allow users to deactivate their accounts without permanently deleting their order history.
+- When a User deletes their profile, all of their orders are also deleted due to the on_delete=models.CASCADE setting on the Order model. This means that if a user deletes their profile, they will lose access to their order history. This is not ideal, but it is a trade‑off that I have made in order to allow users to delete their profiles without encountering errors and I plan to fix this in a future update by implementing a soft delete mechanism for user profiles, which would allow users to deactivate their accounts without permanently deleting their order history.
+
+- Even if a user fills out the information on their profile, django doesn't use the saved information to autofill the checkout form. This is because the checkout view does not currently retrieve the user's profile information to pre‑populate the form fields. I plan to fix this in a future update by modifying the checkout view to fetch the user's profile data and pass it to the template, allowing for a more seamless checkout experience.
 
 > There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
